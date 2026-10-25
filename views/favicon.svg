@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Icono de la pestaña: una claqueta de cine sencilla -->
+  <rect x="6" y="22" width="52" height="36" rx="4" fill="#212529"/>
+  <rect x="6" y="10" width="52" height="12" rx="3" fill="#ffc107"/>
+  <rect x="12" y="10" width="8" height="12" fill="#212529"/>
+  <rect x="28" y="10" width="8" height="12" fill="#212529"/>
+  <rect x="44" y="10" width="8" height="12" fill="#212529"/>
+  <rect x="14" y="30" width="36" height="20" rx="2" fill="#f8f9fa"/>
+</svg>

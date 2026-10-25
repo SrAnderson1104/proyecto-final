@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de la película</title>
+    <link rel="icon" href="/favicon.ico">
+
+    <!-- Bootstrap desde CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Nuestros estilos -->
+    <link href="/static/css/estilos.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Barra superior -->
+    <nav class="navbar navbar-dark barra-superior">
+        <div class="container">
+            <a class="navbar-brand" href="/">🎬 Buscador de películas</a>
+            <a class="btn btn-outline-light btn-sm" href="/">← Volver a buscar</a>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+
+        <!-- Mensajes de error o aviso -->
+        <div id="mensaje" class="alert d-none" role="alert"></div>
+
+        <!-- Detalle de la película (lo rellena JavaScript) -->
+        <section id="detalle" class="card shadow-sm mb-4">
+            <div class="card-body">
+                <p class="text-muted mb-0">Cargando película...</p>
+            </div>
+        </section>
+
+        <!-- Calificación (funcionalidad opcional) -->
+        <section class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h2 class="h5 card-title">Calificación</h2>
+
+                <!-- Estrellas con el promedio -->
+                <div id="estrellas" class="estrellas mb-2"></div>
+                <p id="resumen-calificacion" class="text-muted small">Sin calificaciones todavía</p>
+
+                <button id="boton-calificar" class="btn btn-warning btn-sm"
+                        data-bs-toggle="collapse" data-bs-target="#formulario-calificacion-zona">
+                    ⭐ Calificar
+                </button>
+
+                <!-- Formulario para calificar (oculto hasta pulsar el botón) -->
+                <div id="formulario-calificacion-zona" class="collapse mt-3">
+                    <form id="formulario-calificacion" class="row g-2">
+                        <div class="col-md-5">
+                            <input type="text" id="calificacion-persona" class="form-control"
+                                   placeholder="Tu nombre" maxlength="50" required>
+                        </div>
+                        <div class="col-md-4">
+                            <select id="calificacion-valor" class="form-select" required>
+                                <option value="">Calificación</option>
+                                <option value="1">1 - Muy mala</option>
+                                <option value="2">2 - Mala</option>
+                                <option value="3">3 - Normal</option>
+                                <option value="4">4 - Buena</option>
+                                <option value="5">5 - Excelente</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 d-grid">
+                            <button type="submit" class="btn btn-success">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comentarios -->
+        <section class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h2 class="h5 card-title">Comentarios</h2>
+
+                <!-- Lista de comentarios (la rellena JavaScript) -->
+                <div id="lista-comentarios" class="mb-3"></div>
+
+                <button id="boton-comentar" class="btn btn-primary btn-sm"
+                        data-bs-toggle="collapse" data-bs-target="#formulario-comentario-zona">
+                    💬 Agregar comentario
+                </button>
+
+                <!-- Formulario para comentar (oculto hasta pulsar el botón) -->
+                <div id="formulario-comentario-zona" class="collapse mt-3">
+                    <form id="formulario-comentario">
+                        <div class="mb-2">
+                            <input type="text" id="comentario-persona" class="form-control"
+                                   placeholder="Tu nombre" maxlength="50" required>
+                        </div>
+                        <div class="mb-2">
+                            <textarea id="comentario-texto" class="form-control" rows="3"
+                                      placeholder="Escribe tu comentario" maxlength="500" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Bootstrap JavaScript (necesario para los botones que despliegan los formularios) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Nuestro JavaScript -->
+    <script src="/static/js/comun.js"></script>
+    <script src="/static/js/detalle.js"></script>
+</body>
+</html>

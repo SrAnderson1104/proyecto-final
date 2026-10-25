@@ -1,0 +1,62 @@
+/* Estilos propios. Bootstrap hace casi todo el trabajo; aquí solo los detalles. */
+
+body {
+    background-color: #f4f5f7;
+}
+
+/* Barra superior con el título de la página: fondo azul oscuro, letras blancas */
+.barra-superior {
+    background-color: #0b2a5b;
+}
+
+.barra-superior .navbar-brand {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Campos del buscador (título y año): texto en negrita, también el texto de ayuda */
+#campo-titulo,
+#campo-anio {
+    font-weight: bold;
+}
+
+#campo-titulo::placeholder,
+#campo-anio::placeholder {
+    font-weight: bold;
+}
+
+/* Tarjeta de cada película en los resultados */
+.tarjeta-pelicula {
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+
+.tarjeta-pelicula:hover {
+    transform: translateY(-4px);
+}
+
+/* Póster dentro de la tarjeta: todos con la misma altura */
+.tarjeta-pelicula img {
+    height: 320px;
+    object-fit: cover;
+}
+
+/* Póster en la página de detalle */
+.poster-detalle {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+/* Estrellas del promedio de calificaciones */
+.estrellas {
+    font-size: 1.8rem;
+    color: #ffc107;
+    letter-spacing: 2px;
+}
+
+/* Cada comentario */
+.comentario {
+    border-left: 4px solid #0d6efd;
+    padding-left: 12px;
+    margin-bottom: 12px;
+}
